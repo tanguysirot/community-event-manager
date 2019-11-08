@@ -18,6 +18,9 @@ cd community-event-manager/
 
 # Build and initialize the project
 make install
+
+# If any permission problem happends use 
+sudo make install
 ```
 
 ## Configuration
@@ -29,7 +32,20 @@ make install
 Once you are ready `make install` the project, and run it with:
 
 ``` bash
-make
+make run
+```
+
+If you get the error
+```
+ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+
+If it's at a non-standard location, specify the URL with the DOCKER_HOST environment variable.
+make: *** [Makefile:38: run] Error 1
+```
+
+use 
+``` bash
+sudo make run
 ```
 
 Then you should be able to access:
